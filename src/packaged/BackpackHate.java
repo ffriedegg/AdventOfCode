@@ -12,7 +12,9 @@ public class BackpackHate {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(
-				new FileReader(new File("/Users/ffriedegg/eclipse-workspace/AdventOfCode/src/backpackMadness.txt")));
+				new FileReader("C:\\Users\\fajle\\eclipse-workspace\\AdventOfCode\\src\\packaged\\backpackMadness.txt"));
+		
+		System.out.println();
 
 		getElfBadgePrio(br);
 
@@ -38,14 +40,13 @@ public class BackpackHate {
 				for(int i = 0; i < elf.length(); ++i) {
 					for(int j = 0; j < elf2.length(); ++j) {
 						if(elf.charAt(i) == elf2.charAt(j)) {
-							for(int k = 0; k < elf3.length(); ++k) {
-								if(elf.charAt(i) == elf3.charAt(k)) {
-									badgeTotal += getCharIntValue(elf.charAt(i));
+							if(elf3.contains(elf.charAt(i) + "")) {
+								badgeTotal += getCharIntValue(elf.charAt(i));
 									foundBadge = true;
 									++totalElfGroups;
 									break;
-								}
 							}
+
 						}
 						if(foundBadge) {
 							break;
