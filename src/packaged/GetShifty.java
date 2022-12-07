@@ -24,7 +24,7 @@ public class GetShifty {
 			}
 			
 			if(superCheesy.size() == 14) {
-				System.out.println(i+14);
+				System.out.println(i + 14);
 				break;
 			}
 
